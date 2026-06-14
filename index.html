@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Biologi SMP-SMA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="start-screen" class="screen">
+            <h1>Kuis Biologi</h1>
+            <h2>SMP - SMA Awal</h2>
+            <div class="rules-box">
+                <p><strong>Aturan Main:</strong></p>
+                <ul>
+                    <li>Terdapat total 50 soal pilihan ganda (A-D).</li>
+                    <li>Waktu awal: <strong>3 Menit</strong> (03:00).</li>
+                    <li>Jawaban <strong>BENAR</strong>: +10 Poin & +5 Detik (Lanjut soal berikutnya).</li>
+                    <li>Jawaban <strong>SALAH</strong>: -2 Detik (Bisa coba lagi sampai benar).</li>
+                </ul>
+            </div>
+            <button id="start-btn">Mulai Kuis</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hide">
+            <div class="quiz-header">
+                <div id="timer">Waktu: 03:00</div>
+                <div id="score">Poin: 0</div>
+            </div>
+            <div id="question-number">Soal 1 dari 50</div>
+            <div id="question-text">Memuat pertanyaan...</div>
+            <div id="options-container" class="options-grid">
+                </div>
+            <div id="feedback" class="feedback hide"></div>
+        </div>
+
+        <div id="end-screen" class="screen hide">
+            <h1>Kuis Selesai!</h1>
+            <p id="final-status" class="status-text"></p>
+            <div class="result-box">
+                <p id="final-score">Total Poin Kamu: 0</p>
+            </div>
+            <button id="restart-btn" onclick="location.reload()">Main Lagi</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
